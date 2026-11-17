@@ -62,6 +62,6 @@ XEL9-C는 `XEL9-C-v…` 릴리즈의 Assets에서 받습니다(파일 이름이 
 © 2026 XEL9 by 1Pixel Inc. All Rights Reserved.
 
 XEL9 앱은 1Pixel Inc.의 비공개(proprietary) 소프트웨어입니다. 이 저장소의 파일은 개인과 조직이 해당 앱을 설치·업데이트하는 용도로 배포됩니다. 1Pixel Inc.의 허락 없이 수정하거나, 다른 곳에 다시 배포하거나, 판매할 수 없습니다.
-앱에 쓰인 오픈소스 구성 요소의 라이선스는 앱의 **설정 → 정보 → 오픈소스 라이선스**와 설치 폴더의 `THIRD_PARTY_NOTICES.md`에 있습니다.
+앱에 쓰인 오픈소스 구성 요소의 라이선스는 앱의 **설정 → 정보 → 서드파티 라이선스**와 설치 폴더의 `THIRD_PARTY_NOTICES.md`에 있습니다.
 
 XEL9 apps are proprietary software of 1Pixel Inc. The files here are provided for installing and updating the apps; modifying, redistributing or selling them without permission is not allowed. Open-source components are listed in each app (Settings → About → Open-source licenses) and in `THIRD_PARTY_NOTICES.md` in the installation folder.
