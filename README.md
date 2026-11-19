@@ -6,10 +6,10 @@
 
 이 저장소는 XEL9-Z의 **공식 배포 저장소**입니다. 설치 파일과 앱 안 업데이트 파일만 있고 소스 코드는 없습니다.
 
-![XEL9-Z 압축 풀기 화면](https://raw.githubusercontent.com/wiki/xel9-update/xel9-z/images/z-extract.png)
+![XEL9-Z 압축 풀기 화면](https://raw.githubusercontent.com/wiki/xel9-update/xel9-z/images/extract.png)
 
 - 홈페이지: https://www.xel9.com
-- 사용법: **[XEL9-Z 위키](../../wiki)**
+- 사용법: **[XEL9-Z 위키](../../wiki)** (영문)
 - 업데이트 내역: [Releases](../../releases)
 
 ## 다운로드
@@ -23,17 +23,17 @@
 | Linux (64비트) | [AppImage](../../releases/latest/download/XEL9-Z_amd64.AppImage) · [.deb](../../releases/latest/download/XEL9-Z_amd64.deb) · [.rpm](../../releases/latest/download/XEL9-Z.x86_64.rpm) |
 | 명령줄 도구만 | [Windows](../../releases/latest/download/xel9-z-cli-windows-x86_64.zip) · [macOS](../../releases/latest/download/xel9-z-cli-macos-universal.zip) · [Linux](../../releases/latest/download/xel9-z-cli-linux-x86_64.tar.gz) |
 
-파일마다 어떤 것을 고르면 되는지, 받은 파일이 온전한지 확인하는 방법은 위키의 [설치와 업데이트](../../wiki/설치와-업데이트)에 있습니다.
+파일마다 어떤 것을 고르면 되는지, 받은 파일이 온전한지 확인하는 방법은 위키의 [설치와 업데이트](../../wiki/Installation-and-Updates)에 있습니다.
 
 ## 사용법
 
-프로그램 사용법은 위키에 정리해 두었습니다.
+프로그램 사용법은 위키에 영문으로 정리해 두었습니다.
 
 | 위키 페이지 | 내용 |
 |---|---|
-| [설치와 업데이트](../../wiki/설치와-업데이트) | 운영체제별 설치 파일, 앱 안 업데이트, 직접 덮어 설치하기, 안전하게 받기 |
-| [데스크톱 앱 사용법](../../wiki/데스크톱-앱-사용법) | 화면 그림과 함께 보는 압축하기·풀기, 보안 볼트 관리, 설정, 우클릭 메뉴 |
-| [명령줄(CLI) 사용법](../../wiki/명령줄-CLI-사용법) | 터미널의 `x9z` 명령과 예시 |
+| [설치와 업데이트](../../wiki/Installation-and-Updates) | 운영체제별 설치 파일, 앱 안 업데이트, 직접 덮어 설치하기, 안전하게 받기 |
+| [데스크톱 앱 사용법](../../wiki/Desktop-App-Guide) | 화면 그림과 함께 보는 압축하기·풀기, 보안 볼트 관리, 설정, 우클릭 메뉴 |
+| [명령줄(CLI) 사용법](../../wiki/Command-Line-Guide) | 터미널의 `x9z` 명령과 예시 |
 
 ## 특징
 
@@ -60,4 +60,4 @@
 
 ---
 
-**English:** XEL9-Z is a file compression app for Windows, macOS and Linux. It opens most archive formats and stores sensitive files in its own encrypted vault format (`.x9z`), which hides even file names. This repository hosts the official installers and update packages only; see the [wiki](../../wiki) for usage (Korean). Free to use for individuals and organizations; provided as is, without warranty. Modifying, redistributing or selling it without permission of 1Pixel Inc. is not allowed.
+**English:** XEL9-Z is a file compression app for Windows, macOS and Linux. It opens most archive formats and stores sensitive files in its own encrypted vault format (`.x9z`), which hides even file names. This repository hosts the official installers and update packages only; see the [wiki](../../wiki) for the user guide. Free to use for individuals and organizations; provided as is, without warranty. Modifying, redistributing or selling it without permission of 1Pixel Inc. is not allowed.
