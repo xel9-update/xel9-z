@@ -1,59 +1,57 @@
 # XEL9-Z
 
-**Secure. Compress. Protect.**
+XEL9-Z(암호화 보관함·압축 프로그램)의 **공식 배포 저장소**입니다. 1Pixel Inc.가 만든 XEL9-Z의 설치 파일과 자동 업데이트 파일을 여기서 내려받습니다.
+소스 코드는 이 저장소에 없습니다. 파일은 빌드가 서명한 뒤 자동으로 올립니다.
 
-Fast compression, safe keeping in a vault. XEL9-Z is a file compression app for Windows, macOS and Linux. It opens almost any archive you receive (zip, 7z, rar, alz/egg and more), and keeps your sensitive files in **XEL9 Vault (`.x9z`)**, its own encrypted format. Without the password, nobody can see what is inside, not even the file names.
+This is the **official download repository** for XEL9-Z by 1Pixel Inc. (encrypted vaults and archives): installers and auto-update packages, published automatically by the build. No source code is kept here.
 
-This is the **official download repository** for XEL9-Z. It holds only the installers and in-app update packages; there is no source code here.
+- 홈페이지 / Website: https://www.xel9.com
+- 릴리즈 목록 / All releases: [Releases](../../releases)
 
-![XEL9-Z extract screen](https://raw.githubusercontent.com/wiki/xel9-update/xel9-z/images/extract.png)
+## 내려받기 / Download
 
-- Website: https://www.xel9.com
-- User guide: **[XEL9-Z Wiki](../../wiki)**
-- Release notes: [Releases](../../releases)
+각 릴리즈의 **Assets**에서 운영체제에 맞는 파일을 받습니다. 설치 파일은 버전 없는 이름으로도 올라가 있어, 아래 링크는 항상 최신판을 줍니다.
 
-## Download
+| 운영체제 | 파일 | 최신판 링크 |
+|---|---|---|
+| Windows 10/11 (x64) | 설치 프로그램 `.exe` (권장), `.msi` | [XEL9-Z_x64-setup.exe](../../releases/latest/download/XEL9-Z_x64-setup.exe) |
+| macOS 11 이상 (Apple Silicon·Intel) | `.dmg` | [XEL9-Z_universal.dmg](../../releases/latest/download/XEL9-Z_universal.dmg) |
+| 명령줄 도구 (CLI) | `xel9-z-cli-*.zip` / `.tar.gz` | 릴리즈의 Assets |
 
-These links always point to the newest release.
+## 업데이트 / Updating
 
-| System | Download |
-|---|---|
-| Windows 10/11 (64-bit) | [Installer (.exe)](../../releases/latest/download/XEL9-Z_x64-setup.exe) · [MSI package](../../releases/latest/download/XEL9-Z_x64_en-US.msi) |
-| macOS 11 or later (Apple silicon and Intel) | [Disk image (.dmg)](../../releases/latest/download/XEL9-Z_universal.dmg) |
-| Linux (64-bit) | [AppImage](../../releases/latest/download/XEL9-Z_amd64.AppImage) · [.deb](../../releases/latest/download/XEL9-Z_amd64.deb) · [.rpm](../../releases/latest/download/XEL9-Z.x86_64.rpm) |
-| Command-line tool only | [Windows](../../releases/latest/download/xel9-z-cli-windows-x86_64.zip) · [macOS](../../releases/latest/download/xel9-z-cli-macos-universal.zip) · [Linux](../../releases/latest/download/xel9-z-cli-linux-x86_64.tar.gz) |
+### 자동 업데이트
 
-Which file to pick, and how to check that a download is intact, is explained in [Installation and Updates](../../wiki/Installation-and-Updates) on the wiki.
+앱의 **설정 → 업데이트**에서 확인하거나 "앱을 시작할 때 업데이트 확인"을 켜 두면, 앱이 새 버전을 알려 주고 받아서 설치합니다.
+업데이트 파일은 앱에 들어 있는 공개 키로 서명을 확인하며, 맞지 않으면 설치하지 않습니다.
 
-## User guide
+### 직접 받아서 업데이트하기
 
-The full guide is on the wiki.
+자동 업데이트를 쓰지 않거나 실패했을 때는 최신 설치 파일을 받아 **기존 앱 위에 설치**하면 됩니다. 설정, 우클릭 메뉴, 신뢰 목록, 보관함은 그대로 남습니다.
 
-| Wiki page | What it covers |
-|---|---|
-| [Installation and Updates](../../wiki/Installation-and-Updates) | Which file to download, in-app updates, installing over the old version, downloading safely |
-| [Desktop App Guide](../../wiki/Desktop-App-Guide) | Compressing, extracting, managing vaults, settings and the right-click menu, with screenshots |
-| [Command-Line Guide](../../wiki/Command-Line-Guide) | The `x9z` command with examples |
+1. 위 표나 [최신 릴리즈](../../releases/latest)에서 운영체제에 맞는 파일을 받습니다.
+2. (권장) 같은 릴리즈의 `SHA256SUMS`로 파일이 온전한지 확인합니다.
+   - macOS: `shasum -a 256 -c SHA256SUMS --ignore-missing`
+   - Windows (PowerShell): `Get-FileHash .\XEL9-Z_0.5.1_x64-setup.exe -Algorithm SHA256` 결과를 `SHA256SUMS`의 같은 이름 줄과 비교
+3. 운영체제별로 설치합니다.
+   - **Windows:** 앱을 닫고 받은 `-setup.exe`를 실행합니다. 같은 위치에 덮어 설치됩니다(`.msi`로 설치했다면 새 `.msi`를 실행).
+   - **macOS:** 앱을 종료하고 `.dmg`를 열어 앱을 **응용 프로그램** 폴더로 끌어다 놓은 뒤 "대치"를 고릅니다.
+4. 앱을 다시 열어 **설정 → 정보**에서 버전을 확인합니다.
 
-## Features
+릴리즈에는 앱이 자동 업데이트에 쓰는 파일(`*.app.tar.gz`, `*-setup.exe`)도 함께 있습니다. 직접 설치할 때는 위 표의 설치 파일을 쓰면 됩니다.
 
-- **A vault that encrypts file names too:** not just the contents but file names, sizes and folder structure are hidden. Every password guess costs a lot of memory, which makes mass guessing hard.
-- **Opens almost any archive you receive:** zip, 7z, rar, alz/egg, the tar family, and disk images such as ISO and DMG. The format is recognized by content, not by extension.
-- **Dangerous archives are stopped:** paths that escape the target folder, zip bombs and unsafe links are caught before anything is written.
-- **Desktop app (GUI) and command line (CLI):** a desktop app you use with the mouse, plus the `x9z` command for scripts and servers.
-- **No ads, no upsell:** there are no ads in the app and no prompts to upgrade or pay.
-- **Everything stays on your computer:** the app never connects to the internet unless you turn on update checks.
+### 안전하게 받기
 
-## Download safely
+- XEL9-Z는 **이 저장소와 https://www.xel9.com 에서만** 받으세요. 다른 곳에서 받은 파일은 실행하지 마세요.
+- macOS 앱은 Apple Developer ID로 서명하고 공증(notarization)을 받았습니다.
+- Windows에서 처음 실행할 때 SmartScreen이 경고하면, 이 저장소나 홈페이지에서 받은 파일인지 확인한 뒤 "추가 정보 → 실행"을 누릅니다.
+- 보안 문제를 발견하면 홈페이지의 연락처로 알려 주세요.
 
-- Get XEL9-Z **only from this repository or https://www.xel9.com**.
-- In-app updates are checked against the public key built into the app and are not installed if the signature does not match.
-- To report a security problem, use the contact details on the website.
+## 저작권 / Copyright
 
-## Terms of use
+© 2026 XEL9 by 1Pixel Inc. All Rights Reserved.
 
-> Anyone, including individuals, companies, schools and public institutions, may install and use XEL9-Z freely without asking for permission.
+XEL9 앱은 1Pixel Inc.의 비공개(proprietary) 소프트웨어입니다. 이 저장소의 파일은 개인과 조직이 해당 앱을 설치·업데이트하는 용도로 배포됩니다. 1Pixel Inc.의 허락 없이 수정하거나, 다른 곳에 다시 배포하거나, 판매할 수 없습니다.
+앱에 쓰인 오픈소스 구성 요소의 라이선스는 앱의 **설정 → 정보 → 서드파티 라이선스**와 설치 폴더의 `THIRD_PARTY_NOTICES.md`에 있습니다.
 
-> XEL9-Z is provided as is. The developer is not responsible for data loss or any other problem that arises from using it. Keep backups of important files.
-
-© 2026 XEL9 by 1Pixel Inc. You are free to use it, but you may not modify, redistribute or sell it without permission from 1Pixel Inc. Licenses of the open-source components used in the app are listed under Settings → About → **Third-party licenses**.
+XEL9 apps are proprietary software of 1Pixel Inc. The files here are provided for installing and updating the apps; modifying, redistributing or selling them without permission is not allowed. Open-source components are listed in each app (Settings → About → Open-source licenses) and in `THIRD_PARTY_NOTICES.md` in the installation folder.
